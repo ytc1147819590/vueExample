@@ -7,6 +7,7 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var $sql = require('../sqlMap');
+var $sqlDel = require('../sqlDel');
 
 // 连接数据库
 var conn = mysql.createConnection(models.mysql);
@@ -33,6 +34,22 @@ router.post('/addUser', (req, res) => {
       console.log(err);
     }
     if (result) {
+      jsonWrite(res, result);
+    }
+  })
+});
+
+//删除
+router.post('/del', (req, res) => {
+  var del = $sqlDel.user.del;
+  var params = req.body;
+  console.log(params);
+  conn.query(del, [params.username], function(err, result) {
+    if (err) {
+      console.log(err);
+    }
+    if (result) {
+      console.log(2)
       jsonWrite(res, result);
     }
   })

@@ -29,7 +29,7 @@
           method:"post",
           data:{
             username: name,
-            age: age
+            age:age
           }
         }).then(function(res){
           console.log(res);
