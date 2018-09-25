@@ -23,12 +23,21 @@
       addUser() {
         var name = this.userName;
         var age = this.age;
-        this.$http.post('/api/user/addUser', {
-          username: name,
-          age: age
-        },{}).then((response) => {
-          console.log(response);
-      })
+
+        this.$axios({
+          url:"/api/user/addUser",
+          method:"post",
+          data:{
+            username: name,
+            age: age
+          }
+        }).then(function(res){
+          console.log(res);
+        }).catch(function(err){
+          console.log(err);
+        })
+
+
       }
     }
   }
