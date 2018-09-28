@@ -29,6 +29,7 @@ router.post('/addUser', (req, res) => {
   var sql = $sql.user.add;
   var params = req.body;
   console.log(params);
+  console.log(req.param);
   conn.query(sql, [params.username, params.age], function(err, result) {
     if (err) {
       console.log(err);
@@ -43,6 +44,7 @@ router.post('/addUser', (req, res) => {
 router.post('/del', (req, res) => {
   var del = $sqlDel.user.del;
   var params = req.body;
+
   console.log(params);
   conn.query(del, [params.username], function(err, result) {
     if (err) {

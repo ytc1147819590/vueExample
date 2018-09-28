@@ -36,8 +36,6 @@
         }).catch(function(err){
           console.log(err);
         })
-
-
       }
     }
   }
