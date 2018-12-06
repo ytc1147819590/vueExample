@@ -4,12 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
+import ElementUI from 'element-ui'
 import axios from "axios";
 
 
 Vue.config.productionTip = false;
 
 Vue.use(VueResource);
+Vue.use(ElementUI);
 Vue.prototype.$axios=axios;
 
 /* eslint-disable no-new */
