@@ -8,8 +8,11 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      component: Layout
+      path: '/day01',
+      component: () => import('@/lianxi/day01')
+    }, {
+      path: '/day02',
+      component: () => import('@/lianxi/day02')
     }
   ]
 })
