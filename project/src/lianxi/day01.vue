@@ -30,7 +30,8 @@
               { label: '删除', type: 'danger' }
             ],
             radio: 'tt'
-          }
+          },
+          radio: 'name'
         }
       }
     }
