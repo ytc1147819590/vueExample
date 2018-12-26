@@ -20,6 +20,7 @@
 
       <div>
         <h1>mapActions</h1>
+        <el-button @click="dian('山海经')">点击</el-button>
         <p>actions ，要执行的动作，如流程的判断、异步请求{{ADD_BOOK}}</p>
         <p> 提交一个名为 increment 的变化，名字可自定义，可以认为是类型名，与下方 mutations 中的 increment 对应 commit 提交变化，修改数据的唯一方式就是显式的提交 mutations</p>
       </div>
@@ -42,13 +43,13 @@
         ...mapMutations([
           'ADD_BOOK'
         ]),
-        ...mapActions([
-          'ADD_BOOK'
-        ])
+        ...mapActions({
+          dian:'ADD_BOOK'
+        })
       },
       mounted() {
-        console.log(this)
-        this.ADD_BOOK()
+        // console.log(this)
+        // this.ADD_BOOK()
       }
     }
 </script>
