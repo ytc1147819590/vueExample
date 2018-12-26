@@ -7,10 +7,13 @@ import VueResource from 'vue-resource'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import axios from "axios";
+import Vuex from 'vuex'
+import store from './store/index'
 
 
 Vue.config.productionTip = false;
 
+Vue.use(Vuex);
 Vue.use(VueResource);
 Vue.use(ElementUI);
 Vue.prototype.$axios=axios;
@@ -19,6 +22,7 @@ Vue.prototype.$axios=axios;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
