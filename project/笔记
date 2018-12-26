@@ -1,0 +1,15 @@
+const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+})
+
+状态对象store.state，并使用以下store.commit方法触发状态更改：
+store.commit('increment')
+
+console.log(store.state.count) // -> 1
