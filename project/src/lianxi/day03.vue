@@ -44,7 +44,7 @@
           'ADD_BOOK'
         ]),
         ...mapActions({
-          dian:'ADD_BOOK'
+          dian:'add_book'
         })
       },
       mounted() {
