@@ -19,6 +19,10 @@ export default new Router({
       path: '/day03',
       name: '/day03',
       component: () => import('@/lianxi/day03')
+    }, {
+      path: '/user',
+      name: '/user',
+      component: () => import('@/lianxi/user')
     }
   ]
 })

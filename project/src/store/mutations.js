@@ -6,6 +6,9 @@ const mutations = {
   ADD_BOOK(state, value) {
     state.book.push(value)
     console.log(value)
+  },
+  LOGIN(state, userinfo) {
+    state.formData = userinfo
   }
 }
 

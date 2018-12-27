@@ -5,6 +5,9 @@ const actions = {
   add_book({commit}, value) {  // ({commit,state}) 这种写法是 es6 中的对象解构
     // console.log(commit('ADD_BOOK'))
     commit('ADD_BOOK', value)
+  },
+  Login({ commit }, userinfo) {
+    commit('LOGIN', userinfo)
   }
 }
 
