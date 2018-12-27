@@ -7,6 +7,7 @@ const actions = {
     commit('ADD_BOOK', value)
   },
   Login({ commit }, userinfo) {
+    console.log(userinfo)
     commit('LOGIN', userinfo)
   }
 }
